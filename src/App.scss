@@ -1,7 +1,7 @@
 .sales-container {
   display: flex;
   min-height: 600px;
-  height: 600px;
+  height: 100%;
   > .list {
     height: 100%;
     flex: 5;
@@ -9,10 +9,73 @@
     > h1 {
       margin-left: 25px;
     }
+    > .header {
+      display: flex;
+      > h2 {
+        flex: 1;
+        padding-left: 35px;
+        &:first-child {
+          flex: 4;
+          padding-left: 25px;
+        }
+      }
+    }
+    > .list-content {
+      display: flex;
+      align-items: center;
+      transition: box-shadow 0.25s;
+      &:hover {
+        box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+      }
+      > .list-container {
+        display: flex;
+        flex-direction: column;
+        > .titles-container {
+          display: flex;
+        }
+      }
+      > input {
+        text-align: center;
+        height: 28px;
+        width: 50px;
+        margin-right: 25px;
+      }
+    }
+    > .new-item-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 25px;
+      padding: 16px 0;
+      background-color: #fffff0;
+
+      > .values-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 30px;
+        flex: 1;
+        > #newItemValue {
+          margin-bottom: 10px;
+          width: 110px;
+        }
+        > #newItemtax {
+          width: 110px;
+        }
+      }
+
+      > #newItemName {
+        flex: 6;
+      }
+
+      > #addNewItem {
+        flex: 1;
+        margin-right: 10px;
+        border: 1px lightgray solid;
+      }
+    }
   }
   > .receipt {
     background-color: #ffff99;
-    height: 100%;
     flex: 3;
     border: 1px solid lightgray;
     > h1 {
